@@ -1,0 +1,28 @@
+.aib-footer{
+    padding: 5rem 10rem 3rem 10rem;
+    background: lighten($black-color, 20%);
+    color: $white-color;
+    .footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    @include headerParagraph();
+    p{
+        margin: .4rem;
+    }
+    .social-icons{
+       @include navbar;
+    }
+ } 
+ .footer-bottom{
+    display: flex;
+    justify-content: space-between;
+     margin-top: 2rem;
+     @include navbar;
+     p{
+         font-size: .8rem;
+         font-weight: 100;
+     }
+ }
+}

@@ -1,0 +1,144 @@
+.aibTopSection{
+    font-size: 14px;
+   display: grid;
+   grid-template-columns: [top1] 1fr [logo-start] 170px [logo-end] 80vw [nav1-col-end]  1fr [column-end];
+   grid-template-rows: [nav1-start] 40px [nav2-start] 110px [nav2-end];
+   justify-content: stretch;   
+   left: 0;
+   right: 0;
+   z-index: 3;   
+   position: fixed;
+   background: $white-color;
+   .top1{
+       grid-column: top1/logo-start;
+       grid-row: nav1-start/nav2-start;
+       background: $black-color;
+       color: $white-color;
+   }
+   .top2{
+       grid-column: top1/logo-start;
+       grid-row: nav2;       
+   }
+   .logo{
+       grid-column: logo;
+       grid-row: nav1-start/nav2-end;       
+       margin: auto;   
+       width: 100px;  
+      transition: ease 300ms;
+   }
+   .nav1{
+       grid-column: logo-end/nav1-col-end;
+       grid-row: nav1-start/nav2-start;
+       background: $black-color;
+       color: $gray-color;    
+       transition: ease 300ms;
+       display: flex;      
+       justify-content: flex-end;
+       ul{ 
+           display: flex;           
+           li{
+                display: flex;
+                align-items: center;
+               height:100%; 
+               margin: auto 5px;  
+               padding: 0 10px;               
+               a{
+                   color: $gray-color;
+                   opacity: .5;
+                   transition: all ease-in-out 350ms;
+                   &:hover{
+                       color: lighten($gray-color, 30%);
+                   }
+               }
+               &:last-child{
+                background: $red-color;
+                color:$white-color;
+                text-transform: uppercase;
+                padding: 0 20px; 
+                cursor: pointer;
+                transition: all ease-in-out 350ms;
+                &:hover{
+                    background: darken($red-color, 15%);
+                }
+                a{                  
+                 opacity: 1;                 
+                }
+            }
+           }
+       }
+   }
+ 
+   .top3{
+       grid-column: nav1-col-end/column-end;
+       grid-row:nav1-start/nav2-start;
+      background: $black-color;
+   }
+   .nav2{
+       grid-column: logo-end/column-end;
+       grid-row: nav2;   
+       margin-right: 10%; 
+      
+       ul{
+           display: flex;
+           justify-content: flex-end;   
+           height: 100%;  
+           font-size: 1rem;     
+           li{
+            display: flex;
+                align-items: center;
+               height:100%; 
+               margin: auto 5px;  
+               padding: 0 10px;  
+               a{
+                   color: $black-color;
+               }
+           }
+       }
+       
+   }
+   &.navbar-hidden{
+    grid-template-columns: [top] 1fr [logo-start] 80px [logo-end] 85vw [nav-col-end]  1fr [column-end]; 
+    grid-template-rows: [nav-start] 110px [nav-end];  
+   box-shadow: 2px 5px 8px rgba(0,0,0 , .4);
+   
+    .top2,.nav2{
+        display: none;       
+        @include navabarToggle(-200%);
+    }
+    .top1{
+        grid-column: top/logo-start;
+        grid-row: nav;
+        background: $white-color;
+    }
+    .top3{
+        grid-column: nav-col-end/column-end;
+    }
+    .logo{
+        grid-column: logo;
+        grid-row: nav;        
+        width: 70px;
+    }
+    .nav1{
+        grid-column: logo-end/nav-col-end;
+        grid-row: nav;  
+        background: $white-color;
+        color: $black-color;
+        ul{
+            li{
+                height: 40%;
+                &:last-child{                   
+                    @include Enquire();
+                }
+            }
+        }
+        a{
+            color: $black-color;
+            opacity: 1;
+            &:hover{
+                color: darken($red-color, 15%);
+            }
+        }  
+    }
+}
+   
+}

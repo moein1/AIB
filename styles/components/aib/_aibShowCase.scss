@@ -1,0 +1,57 @@
+.aib-show-case{
+   @include flexColmmCenter();
+    
+    h1{
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 2.2rem;
+    }
+   
+    .aib-show-case-content{
+        padding: 10px 10rem;        
+        font-size: 1.2rem;
+        text-align: center;
+        line-height:1.6;
+        font-weight: 100;
+        a{
+            @include hyperlink();
+        }
+      
+    }
+    .showcase-container{
+        display: flex; 
+        margin: 1rem 2rem; 
+    }
+}
+// section for second showcase
+.showcase-second{ 
+    top: 50px;
+    position: relative;
+.aibVideoParlalax{
+    background-image: url("https://www.aib.edu.au/wp-content/uploads/2019/03/home-wistia-thumbnail.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+ }
+ .paralax-content{
+    position: absolute;
+    color: $white-color;
+    width: 100%;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+  @include flexColmmCenter();
+  
+  h2{
+     @include h2;
+  }
+   i{       
+       font-size: 5.5rem;
+       cursor: pointer;
+       @include hyperlink();
+   }
+ }
+}

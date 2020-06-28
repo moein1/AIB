@@ -1,0 +1,31 @@
+.show-case-part{ 
+    @include flexColmmCenter();
+    height: 40vh;
+    padding: 1rem 2.3rem;
+   .show-case-img{
+       height: 20vh;
+   }
+    img{      
+     
+        width: 100px;
+        height: auto;
+    }
+    h4{
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin: 1rem 0;
+    }
+    p{
+        text-align: center;
+        line-height: 1.5;
+        font-size: .96rem;
+        font-weight: 200;
+    }
+    a{
+        color: $red-color;
+        transition: color ease-in-out 500ms;
+        &:hover{
+            color: darken($red-color, 20%);
+        }
+    }
+}
