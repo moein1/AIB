@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve --host localhost",
     "build": "vue-cli-service build",
     "lint": "tslint --project . --fix",
-    "unit": "jest"
+    "unit": "jest",
+    "start": "node server.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
